@@ -1,0 +1,21 @@
+CICFlowMeter Official Documentation (2024)
+
+Flow Timeout Policy:
+- TCP flows are terminated upon proper connection teardown (FIN packet)
+- UDP flows and inactive TCP flows are terminated by a flow timeout
+- Default timeout value: 120 seconds (600 seconds configurable)
+
+Known Behavior:
+- When a TCP connection is idle for >120 seconds, CICFlowMeter generates a new flow
+- Long-lived benign connections (SSH, FTP control channel, IRC) are frequently split
+- This creates spurious unidirectional "appendix flows" with incomplete handshake/termination
+
+Feature List (excerpt):
+Flow Duration: Duration of the flow in microseconds
+Total Fwd Packets / Total Bwd Packets
+Fwd Packet Length Max/Mean/Std/Min
+Bwd Packet Length Max/Mean/Std/Min
+Flow Bytes/s, Flow Packets/s
+Fwd IAT Total, Bwd IAT Total
+FIN Flag Count, SYN Flag Count, RST Flag Count, PSH Flag Count, ACK Flag Count
+Active Mean/Max/Min/Std, Idle Mean/Max/Min/Std

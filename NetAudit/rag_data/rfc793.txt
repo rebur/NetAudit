@@ -1,0 +1,31 @@
+RFC 793 - Transmission Control Protocol (September 1981)
+
+3.  FUNCTIONAL SPECIFICATION
+
+3.2.  Terminology
+
+  connection
+     A logical communication path identified by a pair of sockets.
+
+  segment
+     A logical unit of data, in particular a TCP segment includes a TCP header and data.
+
+3.4.  Establishing a connection
+
+  The "three-way handshake" is the procedure used to establish a connection.
+
+  NORMAL CASE:
+    Step 1: SYN (active open)
+    Step 2: SYN, ACK (passive open)
+    Step 3: ACK
+
+3.8.  Closing a Connection
+
+  CLOSE is an operation meaning "I have no more data to send."  The notion of closing a full-duplex connection is subject to ambiguous interpretation.
+
+  Both sides must send FIN and receive ACK of that FIN to complete graceful closure.
+
+  A connection is considered closed when both sides have sent and received FIN.
+
+[...Section 3.9 on Reset (RST) flags...]
+  An RST is used to refuse an invalid segment or abort a connection.
