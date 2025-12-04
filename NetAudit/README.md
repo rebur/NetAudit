@@ -44,12 +44,3 @@ textNetAudit/
 ├── requirements.txt
 ├── run.sh / run.bat
 └── README.md
-引用
-如果你使用了本工具，请引用我们的论文：
-bibtex@inproceedings{fang2025netaudit,
-  author    = {Yuhao Fang},
-  title     = {NetAudit: A Reasoning-Driven Automated Auditing Tool for Labeling Quality in Network Intrusion Detection Datasets},
-  booktitle = {IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)},
-  year      = {2025}
-}
-License: Apache-2.0
